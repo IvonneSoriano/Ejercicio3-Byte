@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+        
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js">     -->
+
+  </head>
+  <body onload="app.show();">
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <form
+          onsubmit="event.preventDefault();app.insert();"
+          class="col-6"
+        >
+          <h2>Registro de Datos</h2>
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input type="number" class="form-control" id="id" />
+          </div>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" />
+          </div>
+          <div class="form-group">
+            <label for="nit">NIT</label>
+            <input type="text" class="form-control" id="nit" />
+          </div>
+          <div class="form-group">
+            <label for="fundacion">Fecha de fundacion</label>
+            <input type="text" class="form-control" id="fundacion" />
+          </div>
+
+          <div class="form-group">
+            <label for="direccion">Direccion</label>
+            <input type="text" class="form-control" id="direccion" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+
+      <div class="ShowData mt-5">
+        <div class="row">
+          <table class="table table-border">
+            <thead>
+                <th>ID</th>
+              <th>Nombre</th>
+              <th>NIT</th>
+              <th>Fundacion</th>
+              <th>Direccion</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </thead>
+            <tbody id="loadData"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
